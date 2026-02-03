@@ -1,0 +1,88 @@
+body {
+    font-family: "Pretendard", sans-serif;
+    background-color: #f5f5f7; /* 아주 연한 회색 배경 */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+
+header p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    color: #111;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/* 카드 디자인 핵심 */
+.card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 은은한 그림자 */
+    min-height: 200px;
+    display: flex; /* 내용물 중앙 정렬 */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease; /* 움직임 부드럽게 */
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+/* 마우스 올렸을 때 살짝 떠오름 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    word-break: keep-all; /* 단어 중간에 끊기지 않게 */
+}
+
+.card-content span {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+/* 버튼 디자인 */
+.btn {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
