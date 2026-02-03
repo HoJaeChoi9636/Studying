@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    font-family: "Pretendard", sans-serif;
+    background-color: #111; /* 어두운 배경 */
+    color: white;
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+/* 각 섹션은 화면을 꽉 채움 */
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* 오프닝 타이틀 */
+.intro h1 { font-size: 3rem; margin-bottom: 20px; }
+.intro p { color: #888; }
+.scroll-down { font-size: 2rem; margin-top: 50px; animation: bounce 2s infinite; }
+
+/* 움직이는 애니메이션 (화살표) */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* 기적의 무대 (중요!) */
+.miracle-container {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden; /* 넘치는 이미지 자르기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 바다 이미지 공통 설정 */
+.sea {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 화면 절반씩 차지 */
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&w=1000');
+    background-size: cover; /* 이미지 꽉 채우기 */
+    z-index: 2; /* 땅보다 위에 있어야 함 */
+}
+
+/* 왼쪽 바다는 이미지의 왼쪽 부분을 보여줌 */
+.sea-left {
+    left: 0;
+    background-position: left center;
+    border-right: 2px solid rgba(255,255,255,0.2); /* 경계선 살짝 */
+}
+
+/* 오른쪽 바다는 이미지의 오른쪽 부분을 보여줌 */
+.sea-right {
+    right: 0;
+    background-position: right center;
+    border-left: 2px solid rgba(255,255,255,0.2);
+}
+
+/* 숨겨진 마른 땅 */
+.dry-land {
+    position: absolute;
+    z-index: 1; /* 바다 밑에 깔림 */
+    color: #ffd700; /* 금색 글씨 */
+    opacity: 0; /* 처음엔 안 보임 */
+    transform: scale(0.8); /* 약간 작게 시작 */
+}
