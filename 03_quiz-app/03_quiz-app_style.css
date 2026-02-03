@@ -1,0 +1,83 @@
+body {
+    font-family: "Pretendard", sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 { font-size: 1.5rem; color: #333; margin-bottom: 5px; }
+.question { font-size: 1.2rem; color: #666; margin-bottom: 30px; font-weight: bold;}
+
+/* 단어를 놓을 박스들 */
+.sortable-list {
+    min-height: 80px; /* 단어가 없어도 영역이 보이게 */
+    background: #e9ecef;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* 단어가 많으면 줄바꿈 */
+    border: 2px dashed #cbd5e0; /* 점선 테두리 */
+}
+
+/* 정답 칸은 좀 더 눈에 띄게 */
+#answer-box {
+    background-color: #fff;
+    border-color: #4c6ef5;
+}
+
+/* 움직이는 단어 카드 디자인 */
+.word-card {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 50px; /* 둥근 알약 모양 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: grab;
+    user-select: none; /* 글자 선택 방지 */
+    transition: transform 0.2s;
+    color: #333;
+}
+
+/* 드래그 중일 때 효과 */
+.word-card:active {
+    cursor: grabbing;
+    background-color: #4c6ef5;
+    color: white;
+    transform: scale(1.1); /* 살짝 커짐 */
+}
+
+/* 정답 확인 버튼 */
+.check-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.check-btn:active { transform: scale(0.95); }
+
+/* 결과 메시지 */
+#result-msg {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 30px;
+}

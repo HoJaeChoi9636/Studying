@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국어 퀴즈</title>
+    <link rel="stylesheet" href="03_quiz-app_style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>다음 문장을 완성하세요</h1>
+        <p class="question">"I eat rice."</p>
+
+        <div id="answer-box" class="sortable-list">
+            </div>
+
+        <div id="word-bank" class="sortable-list">
+            <div class="word-card" data-id="밥을">밥을</div>
+            <div class="word-card" data-id="먹어요">먹어요</div>
+            <div class="word-card" data-id="저는">저는</div>
+        </div>
+
+        <button onclick="checkAnswer()" class="check-btn">정답 확인</button>
+        <p id="result-msg"></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <script src="03_quiz-app_script.js"></script>
+</body>
+</html>
