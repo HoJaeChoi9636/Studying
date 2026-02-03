@@ -60,3 +60,137 @@ h1 {
     color: white;
     transform: rotateY(180deg);
 }
+
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 버튼과 로고 사이 간격 */
+}
+
+/* 햄버거 버튼 디자인 */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 24px;
+    height: 2px;
+    background-color: #111;
+    display: block;
+}
+
+.nav-home {
+    font-weight: 900;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #111;
+    letter-spacing: -0.5px;
+}
+
+/* 2. 사이드바 (숨겨진 상태) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; /* 화면 왼쪽 밖으로 숨김 */
+    width: 280px;
+    height: 100vh; /* 화면 전체 높이 */
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    z-index: 2000; /* 상단 바보다 위에 */
+    transition: left 0.3s ease-in-out; /* 부드럽게 스르륵 */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 사이드바 열렸을 때 (JS가 붙여줄 클래스) */
+.sidebar.open {
+    left: 0; /* 화면 안으로 들어옴 */
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 15px;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* 메뉴 리스트 스타일 */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 20px;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: block;
+    transition: color 0.2s;
+}
+
+.sidebar-links a:hover, .sidebar-links a.active {
+    color: #111;
+    font-weight: 800;
+}
+
+/* 3. 어두운 배경 (오버레이) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1500; /* 사이드바보단 아래, 상단 바보단 위 */
+    display: none; /* 평소엔 안 보임 */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.overlay.show {
+    display: block;
+    opacity: 1;
+}
