@@ -49,6 +49,9 @@ h1 { font-size: 1.5rem; color: #333; margin-bottom: 5px; }
     user-select: none; /* 글자 선택 방지 */
     transition: transform 0.2s;
     color: #333;
+    display: flex;             /* 1. 카드를 플렉스 박스로 변신 */
+    justify-content: center;   /* 2. 가로 방향 중앙 정렬 */
+    align-items: center;       /* 3. 세로 방향 중앙 정렬 (이게 핵심!) */
 }
 
 /* 드래그 중일 때 효과 */
