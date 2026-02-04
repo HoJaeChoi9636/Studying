@@ -19,11 +19,11 @@ const navHTML = `
             <button id="close-btn" class="close-btn">×</button>
         </div>
         <ul class="sidebar-links">
-            <li><a href="/index.html">HOME</a></li>
-            <li><a href="/01_card-game/01_card-game_index.html">01. 단어장</a></li>
-            <li><a href="/02_bible-sea/02_bible-sea_index.html">02. 홍해의 기적</a></li>
-            <li><a href="/03_quiz-app/03_quiz-app_index.html">03. 퀴즈</a></li>
-            <li><a href="/04_todays-verse/04_todays-verse_index.html">04. 말씀 뽑기</a></li>
+            <li><a href="/index.html">00. HOME</a></li>
+            <li><a href="/01_card-game/01_card-game_index.html">01. Word Card Game</a></li>
+            <li><a href="/02_bible-sea/02_bible-sea_index.html">02. Bible Sea</a></li>
+            <li><a href="/03_quiz-app/03_quiz-app_index.html">03. Drag and Drop</a></li>
+            <li><a href="/04_todays-verse/04_todays-verse_index.html">04. Today's Verse</a></li>
             <li><a href="/#/#">05. coming soon</a></li>
         </ul>
     </div>
